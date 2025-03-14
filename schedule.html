@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indiana City Tours</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <link rel="stylesheet/less" type="text/css" href="less/my_styles.less"/>
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+</head>
+<body>
+    <header><h1>Indiana City Tours</h1></header>
+    <div>
+        <a class="hamburger" href="#navbar">
+            <i class="fa fa-bars"></i>
+        </a>
+  
+        <nav id="navbar">
+            <a class="close" href="#">
+                <i class="fa fa-close"></i>
+            </a>
+
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="cities.html">Cities To Explore</a></li>
+                <li><a href="schedule.html">Schedule A Tour</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="formContainer">
+        <h3>Request a tour here! Our scheduling team will reach out to help you plan your next visit!</h3>
+        <form id="scheduleTour" action="#" method="get">
+            <fieldset>
+                <legend>Customer Information</legend>
+                <label for="customerName">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Name"
+                        size="18"
+                        required
+                        minlength="1"
+                        maxlength="40"
+                        pattern="[a-zA-Z]+([\s][a-zA-Z]+)*"
+                    />
+
+                <label for="phoneNumber">Phone Number</label>
+                        <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        size="20"
+                        placeholder="XXX-XXX-XXXX"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        required
+                    />
+              
+
+                    <label for="emailAddress">Email</label>
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="Email Address"
+                        size="10"
+                        required
+                        minlength="1"
+                        maxlength="40"
+                        pattern="[a-zA-Z]+([\s][a-zA-Z]+)*"
+                    />
+            </fieldset>
+
+            <fieldset>
+                <legend>Tour Information</legend>
+                <label for="city">City to Tour</label>
+                    <select id="cities" name="cities" size="8" style="width: 150px; text-align: center">
+                        <option value="Indianapolis">Indianapolis</option>
+                        <option value="Fort Wayne">Fort Wayne</option>
+                        <option value="Evansville">Evansville</option>
+                        <option value="South Bend">South Bend</option>
+                        <option value="Bloomington">Bloomington</option>
+                        <option value="Lafayette">Lafayette</option>
+                        <option value="Muncie">Muncie</option>
+                        <option value="Terre Haute">Terre Haute</option>
+                    </select>
+
+                <label for="date">Desired Tour Date</label>
+                    <input
+                        type="date"
+                        id="tripDate"
+                        name="tripDate"
+                        value="2025-01-01"
+                        min="2025-01-01"
+                        max="2025-12-31"
+                    />
+        
+                <label for="numberOfPeople">Number of People</label>
+                    <input
+                        type="number"
+                        id="numOfPeople"
+                        name="numOfPeople"
+                        min="1"
+                        max="20"
+                        required
+                    />
+            </fieldset>
+            <fieldset>
+                <legend>Ready to Submit?</legend>
+                    <input type="submit" id="process" value="Submit Request" />
+            </fieldset>
+        </form>
+    </div>
+
+    <footer><h3>&copy; Indiana City Tours</h3></footer>
+</body>
+</html>
